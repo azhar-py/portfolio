@@ -37,5 +37,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 /* New Added Routes */
-Route::get('dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'is_verify_email']); 
+Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'dashboard']); 
 
