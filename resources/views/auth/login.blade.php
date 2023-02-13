@@ -102,18 +102,34 @@
 									<h3 class="">Sign Up</h3>
 									<p class="text-muted font-weight-bold">Enter your details to create your account</p>
 								</div>
-								<form class="form text-left" id="kt_login_signup_form">
+								<form method="POST" action="{{ route('register') }}"  class="form text-left" id="kt_login_signup_form">
+									@csrf
 									<div class="form-group py-2 m-0">
-										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="text" placeholder="Fullname" name="fullname" />
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75 @error('name') is-invalid @enderror " type="text" placeholder="Fullname" name="name" value="{{ old('name') }}" />
+										@error('name')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
 									</div>
 									<div class="form-group py-2 m-0 border-top">
-										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="text" placeholder="Email" name="email" autocomplete="off" />
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75 @error('email') is-invalid @enderror" placeholder="Email" name="email" value="{{ old('email') }}"  autocomplete="off" />
+										@error('email')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
 									</div>
 									<div class="form-group py-2 m-0 border-top">
-										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Password" name="password" />
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75 @error('password') is-invalid @enderror" type="password" name="password"  placeholder="Password" />
+										@error('password')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+									@enderror
 									</div>
 									<div class="form-group py-2 m-0 border-top">
-										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Confirm Password" name="cpassword" />
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Confirm Password" name="password_confirmation" />
 									</div>
 									<div class="form-group mt-5">
 										<div class="checkbox-inline">
