@@ -6,14 +6,14 @@
             <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Dashboard</h5>
             <!--end::Page Title-->
             <!--begin::Actions-->
-            <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
+            {{-- <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
             <span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
-            <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a>
+            <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a> --}}
             <!--end::Actions-->
         </div>
         <!--end::Info-->
         <!--begin::Toolbar-->
-        <div class="d-flex align-items-center">
+        {{-- <div class="d-flex align-items-center">
             <!--begin::Actions-->
             <a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">Today</a>
             <a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">Month</a>
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <!--end::Dropdowns-->
-        </div>
+        </div> --}}
         <!--end::Toolbar-->
     </div>
 </div>

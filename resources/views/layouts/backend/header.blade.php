@@ -8,11 +8,11 @@
                 <!--begin::Header Nav-->
                 <ul class="menu-nav">
                     <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active" data-menu-toggle="click" aria-haspopup="true">
-                        <a href="javascript:;" class="menu-link menu-toggle">
-                            <span class="menu-text">Pages</span>
+                        <a href="{{url('dashboard')}}" class="menu-link menu-toggle">
+                            <span class="menu-text">Dashboard</span>
                             <i class="menu-arrow"></i>
                         </a>
-                        <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+                        {{-- <div class="menu-submenu menu-submenu-classic menu-submenu-left">
                             <ul class="menu-subnav">
                                 <li class="menu-item menu-item-active" aria-haspopup="true">
                                     <a href="index.html" class="menu-link">
@@ -194,9 +194,9 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </li>
-                    <li class="menu-item menu-item-submenu" data-menu-toggle="click" aria-haspopup="true">
+                    {{-- <li class="menu-item menu-item-submenu" data-menu-toggle="click" aria-haspopup="true">
                         <a href="javascript:;" class="menu-link menu-toggle">
                             <span class="menu-text">Features</span>
                             <i class="menu-arrow"></i>
@@ -634,7 +634,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li> --}}
                 </ul>
                 <!--end::Header Nav-->
             </div>
@@ -643,7 +643,7 @@
         <!--end::Header Menu Wrapper-->
         <!--begin::Topbar-->
         <div class="topbar">
-            <!--begin::Search-->
+            {{-- <!--begin::Search-->
             <div class="dropdown" id="kt_quick_search_toggle">
                 <!--begin::Toggle-->
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
@@ -1389,7 +1389,7 @@
                     <!--end::Nav-->
                 </div>
                 <!--end::Dropdown-->
-            </div>
+            </div> --}}
             <!--end::Languages-->
             <!--begin::User-->
             <div class="topbar-item">

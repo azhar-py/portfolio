@@ -91,6 +91,13 @@
 		<!--end::Page Vendors-->
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="{{ asset('backend/js/pages/widgets.js')}}"></script>
+
+
+		@if (Request::path() == 'intro'|| Request::route()->getName() == 'edit-intro'|| Request::path() == 'search')
+		<script src="{{ asset('backend/projectjs/intro.js')}}"></script>
+		@endif
+
+
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
