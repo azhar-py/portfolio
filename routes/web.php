@@ -31,10 +31,11 @@ Route::get('/create', function () {
 
 Auth::routes(['verify'=>true]);
 
+Route::get('account/verify/{token}', [AuthController::class, 'verifyAccount'])->name('user.verify');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
 /* New Added Routes */
-Route::get('dashboard', [AuthController::class, 'dashboard'])->middleware(['auth', 'is_verify_email']); 
-Route::get('account/verify/{token}', [AuthController::class, 'verifyAccount'])->name('user.verify');
+Route::get('dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'is_verify_email']); 
+
